@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package HTML::Widget::Plugin::Calendar;
 {
-  $HTML::Widget::Plugin::Calendar::VERSION = '0.001';
+  $HTML::Widget::Plugin::Calendar::VERSION = '0.020';
 }
 use parent qw(HTML::Widget::Plugin Class::Data::Inheritable);
 # ABSTRACT: simple construction of jscalendar inputs
@@ -98,7 +98,7 @@ HTML::Widget::Plugin::Calendar - simple construction of jscalendar inputs
 
 =head1 VERSION
 
-version 0.001
+version 0.020
 
 =head1 SYNOPSIS
 

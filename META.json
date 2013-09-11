@@ -57,7 +57,7 @@
          "web" : "https://github.com/rjbs/html-widget-plugin-calendar"
       }
    },
-   "version" : "0.001",
+   "version" : "0.020",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.019003"
