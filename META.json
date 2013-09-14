@@ -48,16 +48,16 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/rjbs/html-widget-plugin-calendar/issues"
+         "web" : "https://github.com/rjbs/HTML-Widget-Plugin-Calendar/issues"
       },
-      "homepage" : "https://github.com/rjbs/html-widget-plugin-calendar",
+      "homepage" : "https://github.com/rjbs/HTML-Widget-Plugin-Calendar",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/rjbs/html-widget-plugin-calendar.git",
-         "web" : "https://github.com/rjbs/html-widget-plugin-calendar"
+         "url" : "https://github.com/rjbs/HTML-Widget-Plugin-Calendar.git",
+         "web" : "https://github.com/rjbs/HTML-Widget-Plugin-Calendar"
       }
    },
-   "version" : "0.020",
+   "version" : "0.021",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.019003"
