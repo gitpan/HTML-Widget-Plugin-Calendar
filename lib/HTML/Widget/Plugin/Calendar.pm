@@ -1,19 +1,40 @@
 use strict;
 use warnings;
 package HTML::Widget::Plugin::Calendar;
-{
-  $HTML::Widget::Plugin::Calendar::VERSION = '0.021';
-}
-use parent qw(HTML::Widget::Plugin Class::Data::Inheritable);
 # ABSTRACT: simple construction of jscalendar inputs
+$HTML::Widget::Plugin::Calendar::VERSION = '0.022';
+use parent qw(HTML::Widget::Plugin Class::Data::Inheritable);
 
 use HTML::Element;
 use HTML::TreeBuilder;
 use Data::JavaScript::Anon;
 
+#pod =head1 SYNOPSIS
+#pod
+#pod   $factory->calendar({
+#pod     name   => 'date_of_birth',
+#pod     format => '%Y-%m-%d',
+#pod     value  => $user->date_of_birth,
+#pod   });
+#pod
+#pod =head1 DESCRIPTION
+#pod
+#pod This module plugs in to HTML::Widget::Factory and provides a calendar widget
+#pod using the excellent jscalendar.
+#pod
+#pod =head1 METHODS
+#pod
+#pod =head2 C< provided_widgets >
+#pod
+#pod This plugin provides the following widgets: calendar, calendar_js
+#pod
+#pod =cut
 
 sub provided_widgets { qw(calendar calendar_js) }
 
+#pod =head2 calendar
+#pod
+#pod =cut
 
 sub calendar {
   my ($self, $factory, $arg) = @_;
@@ -64,6 +85,16 @@ sub calendar {
   ;
 }
 
+#pod =head2 C< calendar_js >
+#pod
+#pod This method returns the JavaScript needed to use the calendar.  It will only
+#pod return the JavaScript the first time it's called.
+#pod
+#pod Normally it's called when the calendar widget is used, but it may be called
+#pod manually to force the JavaScript to be placed in your document at the location
+#pod of your choosing.
+#pod
+#pod =cut
 
 sub calendar_js {
   my ($self, $factory, $arg) = @_;
@@ -83,6 +114,12 @@ END_HTML
 
 }
 
+#pod =head2 C< calendar_baseurl >
+#pod
+#pod This method sets or returns the plugin's base URL for the jscalendar files.
+#pod This must be set or calendar plugin creation will throw an exception.
+#pod
+#pod =cut
 
 __PACKAGE__->mk_classdata( qw(calendar_baseurl) );
 
@@ -92,13 +129,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTML::Widget::Plugin::Calendar - simple construction of jscalendar inputs
 
 =head1 VERSION
 
-version 0.021
+version 0.022
 
 =head1 SYNOPSIS
 
